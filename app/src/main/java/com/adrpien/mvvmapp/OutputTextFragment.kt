@@ -25,7 +25,7 @@ class OutputTextFragment : Fragment() {
         // Inflate the layout for this fragment
 
         val viewModelProvider = ViewModelProvider(requireActivity()).get(FragmentViewModel::class.java)
-        viewModelProvider.getString().observe(this, object: Observer<String>{
+        viewModelProvider.getMutableLiveData().observe(requireActivity(), object: Observer<String>{
             override fun onChanged(t: String?) {
                 binding.outputTextView.text = t
             }
@@ -34,5 +34,6 @@ class OutputTextFragment : Fragment() {
         _binding = FragmentOutputTextBinding.inflate(inflater, container, false)
         return binding.root
     }
+
 
 }

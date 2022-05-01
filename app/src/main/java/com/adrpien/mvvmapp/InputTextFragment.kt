@@ -26,6 +26,7 @@ class InputTextFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         _binding = FragmentInputTextBinding.inflate(layoutInflater, container, false)
 
+        //
         val viewModelProvider = ViewModelProvider(requireActivity()).get(FragmentViewModel::class.java)
 
 
